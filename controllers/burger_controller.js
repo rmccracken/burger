@@ -29,5 +29,17 @@ router.put('/burgers/:id', (req, res) => {
         res.redirect('/');
     });
 });
-
+// for deleting content havent finished yet
+// router.delete("/api/cats/:id", (req, res) => {
+//     var condition = "id = " + req.params.id;
+  
+//     cat.delete(condition, (result) => {
+//       if (result.affectedRows == 0) {
+//         // If no rows were changed, then the ID must not exist, so 404
+//         return res.status(404).end();
+//       } else {
+//         res.status(200).end();
+//       }
+//     });
+//   });
 module.exports = router; 
