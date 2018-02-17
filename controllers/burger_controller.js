@@ -14,8 +14,8 @@ router.get("/", (req, res) => {
 
 router.post("/burgers", (req, res) => {
     burger.create([
-        "burger_name"
-    ], [req.body.burger_name
+        "burger_name", "devoured"
+    ], [req.body.burger_name, req.body.devoured
         ], (result) => {
             res.redirect("/");
         });
