@@ -30,16 +30,16 @@ router.put('/burgers/:id', (req, res) => {
     });
 });
 // for deleting content havent finished yet
-// router.delete("/api/burgers/:id", (req, res) => {
-//     var condition = "id = " + req.params.id;
+router.delete("/burgers/:id", (req, res) => {
+    var condition = "id = " + req.params.id;
   
-//     cat.delete(condition, (result) => {
-//       if (result.affectedRows == 0) {
+    burger.delete(condition, (result) => {
+      if (result.affectedRows == 0) {
 
-//         return res.status(404).end();
-//       } else {
-//         res.status(200).end();
-//       }
-//     });
-//   });
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    });
+  });
 module.exports = router; 

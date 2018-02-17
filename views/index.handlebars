@@ -4,7 +4,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <h4><u>Burgers ready to eat</u></h4>
+        <h4>
+          <u>Burgers ready to eat</u>
+        </h4>
         {{#each burgers}} {{#unless this.devoured}}
         <div>
           <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
@@ -15,11 +17,16 @@
       </div>
 
       <div class="col-sm-6">
-        <h4><u>Burgers Devoured</u></h4>
+        <h4>
+          <u>Burgers Devoured</u>
+        </h4>
         {{#each burgers}} {{#if this.devoured}}
         <div class='burgersEaten'>
           <div>
-            {{this.burger_name}}
+            <form action="delete/{{this.id}}?_method=DELETE" method="POST"></form>
+            <button type="submit" class='burgersEaten'> {{this.burger_name}} </button>
+            </form>
+
           </div>
         </div>
         {{/if}} {{/each}}
