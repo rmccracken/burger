@@ -61,7 +61,21 @@ let orm = {
             }
             cb(result);
         });
-    }
+    },
+    // didnt get to finish the delete portion
+    // delete: (table, condition, cb) =>{
+    //     let queryString = "DELETE FROM " + table;
+    //     queryString += " WHERE ";
+    //     queryString += condition;
+    
+    //     connection.query(queryString, (error, result) => {
+    //       if (error) {
+    //         throw error;
+    //       }
+    
+    //       cb(result);
+    //     });
+    //   }
 };
 
 module.exports = orm;
